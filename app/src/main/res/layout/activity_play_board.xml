@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayBoardActivity" android:id="@+id/playboardLayout">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView_chips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/wins"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_lose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lose"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_weight="1"
+        android:text="@string/chips"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_leaderboard"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
+
+    <FrameLayout
+        android:id="@+id/default_group"
+        android:layout_width="171px"
+        android:layout_height="184px"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_chips">
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView_bottom"-->
+<!--            android:layout_width="171px"-->
+<!--            android:layout_height="184px"-->
+<!--            app:srcCompat="@drawable/back" />-->
+        <ImageView
+            android:id="@+id/imageView_top"
+            android:layout_width="171px"
+            android:layout_height="184px"
+            app:srcCompat="@drawable/back" />
+    </FrameLayout>
+
+
+
+    <GridLayout
+        android:id="@+id/computer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnCount="6"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/default_group"
+        android:clipChildren="false" android:clipToPadding="false"></GridLayout>
+
+    <GridLayout
+        android:id="@+id/player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnCount="6"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/computer_layout"
+        app:layout_constraintVertical_bias="1.0"
+        android:clipChildren="false" android:clipToPadding="false"></GridLayout>
+
+    <EditText
+        android:id="@+id/editText_bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:digits="0123456789"
+        android:hint="@string/placebet"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_logout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_bet" />
+
+    <Button
+        android:id="@+id/button_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/leaderboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
+
+    <Button
+        android:id="@+id/button_bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+
+        android:layout_marginRight="32dp"
+        android:text="@string/placebet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_leaderboard" />
+
+    <Button
+        android:id="@+id/button_newgame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+
+        android:layout_marginRight="28dp"
+        android:text="@string/newgame"
+        app:layout_constraintEnd_toStartOf="@+id/button_bet"
+        app:layout_constraintTop_toBottomOf="@+id/button_leaderboard" />
+
+    <Button
+        android:id="@+id/button_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="@string/history"
+        app:layout_constraintEnd_toStartOf="@+id/button_leaderboard"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

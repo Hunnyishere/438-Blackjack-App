@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">cse438-assignment4</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="chips">chips:</string>
+    <string name="name">name:</string>
+    <string name="wins">wins:</string>
+    <string name="lose">lose:</string>
+    <string name="logout">logout</string>
+    <string name="leaderboard">Leaders</string>
+    <string name="placebet">place bet</string>
+    <string name="newgame">New game</string>
+    <string name="user_rank">Rank</string>
+    <string name="user_name">Name</string>
+    <string name="user_chips">Chips</string>
+    <string name="history">history</string>
+    <string name="return_button">return</string>
+</resources>

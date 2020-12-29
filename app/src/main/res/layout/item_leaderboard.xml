@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="item" type="com.example.cse438.cse438_assignment4.data.Leaderboard" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/user_rank"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text='@{""+item.rank}' />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text='@{item.name}' />
+
+            <TextView
+                android:id="@+id/user_chips"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text='@{""+item.chips}' />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</layout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1085408305448",
+    "firebase_url": "https://stuodio6-howie.firebaseio.com",
+    "project_id": "stuodio6-howie",
+    "storage_bucket": "stuodio6-howie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085408305448:android:a5b9bb4d6f514b308eb01d",
+        "android_client_info": {
+          "package_name": "com.example.cse438.cse438_assignment4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085408305448-8hlt49rg7ppsedc8gvfjolq7t4cqer5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcHizZx4vpPg90nk9BTwQmkNDbD5o_XP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085408305448-8hlt49rg7ppsedc8gvfjolq7t4cqer5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
